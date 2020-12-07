@@ -4,7 +4,6 @@ error_reporting(0);
 include('includes/config.php');
 if(isset($_POST['change']))
 {
-  //code for captach verification
 if ($_POST["vercode"] != $_SESSION["vercode"] OR $_SESSION["vercode"]=='')  {
         echo "<script>alert('Incorrect verification code');</script>" ;
     } 
@@ -65,9 +64,7 @@ return true;
 
 </head>
 <body>
-    <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
-<!-- MENU SECTION END-->
 <div class="content-wrapper">
 <div class="container">
 <div class="row pad-botm">
@@ -76,7 +73,6 @@ return true;
 </div>
 </div>
              
-<!--LOGIN PANEL START-->           
 <div class="row">
 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
 <div class="panel panel-info">
@@ -117,18 +113,13 @@ return true;
 </div>
 </div>
 </div>  
-<!---LOGIN PABNEL END-->            
              
  
     </div>
     </div>
-     <!-- CONTENT-WRAPPER SECTION END-->
  <?php include('includes/footer.php');?>
-      <!-- FOOTER SECTION END-->
     <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
     <script src="assets/js/bootstrap.js"></script>
-      <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/custom.js"></script>
 
 </body>
