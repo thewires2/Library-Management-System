@@ -20,21 +20,29 @@ $query-> bindParam(':password', $password, PDO::PARAM_STR);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 
+// if($query->rowCount() > 0)
+// {
+//          foreach ($results as $result) 
+//          {
+//                 $_SESSION['stdid']=$result->StudentId;
+//                 if($result->Status==1)
+//                 {
+//                         $_SESSION['login']=$_POST['emailid'];
+//                         echo "<script type='text/javascript'> document.location ='dashboard.php'; </script>";
+//                 } 
+//                 else 
+//                 {
+//                         echo "<script>alert('Your Account Has been blocked .Please contact admin');</script>";
+//                 }
+//         }
+
+// } 
+
 if($query->rowCount() > 0)
 {
- foreach ($results as $result) {
- $_SESSION['stdid']=$result->StudentId;
-if($result->Status==1)
-{
-$_SESSION['login']=$_POST['emailid'];
-echo "<script type='text/javascript'> document.location ='dashboard.php'; </script>";
-} else {
-echo "<script>alert('Your Account Has been blocked .Please contact admin');</script>";
-
-}
-}
-
-} 
+        $_SESSION['login']=$_POST['emailid'];
+        echo "<script type='text/javascript'> document.location ='dashboard.php'; </script>";
+}                
 
 else{
 echo "<script>alert('Invalid Details');</script>";
