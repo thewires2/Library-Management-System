@@ -41,13 +41,9 @@ $error="Your current password is wrong";
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | </title>
-    <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT AWESOME STYLE  -->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
   <style>
     .errorWrap {
@@ -82,7 +78,6 @@ return true;
 </script>
 
 <body>
-    <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
 <div class="content-wrapper">
@@ -124,19 +119,14 @@ Change Password
  </div>
 </div>
 </div>
-</div>  
-<!---LOGIN PABNEL END-->            
+</div>           
              
  
     </div>
     </div>
-     <!-- CONTENT-WRAPPER SECTION END-->
  <?php include('includes/footer.php');?>
-      <!-- FOOTER SECTION END-->
     <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
     <script src="assets/js/bootstrap.js"></script>
-      <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/custom.js"></script>
 </body>
 </html>
