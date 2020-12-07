@@ -7,7 +7,6 @@ $_SESSION['login']='';
 }
 if(isset($_POST['login']))
 {
-  //code for captach verification
 if ($_POST["vercode"] != $_SESSION["vercode"] OR $_SESSION["vercode"]=='')  {
         echo "<script>alert('Incorrect verification code');</script>" ;
     } 
@@ -62,9 +61,7 @@ echo "<script>alert('Invalid Details');</script>";
 
 </head>
 <body>
-    <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
-<!-- MENU SECTION END-->
 <div class="content-wrapper">
 <div class="container">
 <div class="row pad-botm">
@@ -72,8 +69,7 @@ echo "<script>alert('Invalid Details');</script>";
 <h4 class="header-line">USER LOGIN FORM</h4>
 </div>
 </div>
-             
-<!--LOGIN PANEL START-->           
+        
 <div class="row">
 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
 <div class="panel panel-info">
@@ -101,18 +97,12 @@ echo "<script>alert('Invalid Details');</script>";
 </div>
 </div>
 </div>  
-<!---LOGIN PABNEL END-->            
-             
  
     </div>
     </div>
-     <!-- CONTENT-WRAPPER SECTION END-->
 
-      <!-- FOOTER SECTION END-->
     <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
     <script src="assets/js/bootstrap.js"></script>
-      <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/custom.js"></script>
 
 </body>
