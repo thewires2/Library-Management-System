@@ -84,6 +84,13 @@ error:function (){}
 
 </head>
 <body>
+     <style>
+        body{
+            background-image:url('assets/img/body-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
     <div class="content-wrapper">
@@ -96,11 +103,29 @@ error:function (){}
 
         </div>
              <div class="row">
+ <?php
+        if(array_key_exists('signup', $_POST)) { 
+            button1(); 
+        } 
+        function button1() { 
+            $count_my_page = ("studentid.txt");
+            $hits = file($count_my_page);
+            $fp = fopen($count_my_page , "w");
+            fputs($fp , "$hits[0]");
+            fclose($fp); 
+            $StudentId= $hits[0] --; 
+            $msg = "Your Registration is successful and your student id is ".$StudentId."!";
+            $hits[0] ++;
+            $msg = wordwrap($msg,70);
+            mail($_POST["email"],"Thank You for signing up!",$msg); 
+        } 
+       
+    ?>                  
            
 <div class="col-md-9 col-md-offset-1">
                <div class="panel panel-danger">
-                        <div class="panel-heading">
-                           SINGUP FORM
+                        <div class="panel-heading" , id = "signupblackme" , style = "color:black">
+                           SIGNUP FORM
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
@@ -135,6 +160,8 @@ error:function (){}
 <input type="text"  name="vercode" maxlength="5" autocomplete="off" required style="width: 150px; height: 25px;" />&nbsp;<img src="captcha.php">
 </div>                                
 <button type="submit" name="signup" class="btn btn-danger" id="submit">Register Now </button>
+
+
 
                                     </form>
                             </div>

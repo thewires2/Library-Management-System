@@ -49,13 +49,20 @@ echo "<script>alert('Invalid Details');</script>";
 
 </head>
 <body>
+     <style>
+        body{
+            background-image:url('assets/img/body-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
 <div class="content-wrapper">
 <div class="container">
 <div class="row pad-botm">
-<div class="col-md-12">
-<h4 class="header-line">ADMIN LOGIN FORM</h4>
+<div class="col-md-12" id = "adminblackme">
+<h4 class="header-line" style = "color:black">ADMIN LOGIN FORM</h4>
 </div>
 </div>         
 <div class="row">

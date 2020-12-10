@@ -215,6 +215,32 @@ height: 60px;
 
 }
 
+.thisisit{
+    background-color:white;
+    
+}
+
+#blackme{
+    background-color:#f0f7f7;
+    opacity:0.7;
+    width:220px;
+    height: 41px;
+}
+
+#adminblackme{
+    background-color:#f0f7f7;
+    opacity:0.7;
+    width:240px;
+    height: 41px;
+}
+
+#signupblackme{
+    background-color:#f0f7f7;
+    opacity:0.7;
+    width:240px;
+    height: 41px;
+}
+
     .footer-section a, .footer-section a:hover {
         color:#000;
     }
